@@ -1,10 +1,153 @@
 //                          lecture - 03
 
 // maths built in methods - max , mix abs , round etc 
+// Math object 
+
+// Properties 
+// #1 - Euler Number 
+console.log(Math.E);
+
+// #2 - PI 
+console.log(Math.PI);
+
+// #3 - Log2E
+console.log(Math.LOG2E);
+    
+
+// Methods 
+
+// #1 - Round 
+console.log(Math.round(12.79)); // 13
+console.log(Math.round(12.49)); // 12
+
+// #2 - Ceil 
+console.log(Math.ceil(12.79)); //13
+
+// #3 - Floor 
+console.log(Math.floor(12.79)); //12
+
+// #4 - Random 
+console.log(Math.random()); //....................
+
+// #5 - min 
+console.log(Math.min(10,12)); //10
+
+// #6 - Random 
+console.log(Math.max(10,12)); //12
+
+// #7 - pow 
+console.log(Math.pow(2,10)); //1024
+
+
+// Returning a random integer between two bounds
+// LowerBound - 40 
+// Upper Bound - 100
+console.log(Math.round(Math.random() * (100 - 40)) + 40);
+
+
+// Date Object 
+// date in js - we can directly refer from internet - mdn 
+// in this , indexing is start from 0 for month
+// get  - output
+// Set - input 
+// for example 
+// let today = new Date();
+// console.log(today);
+
+let date = Date(); //DAte in a string formate
+console.log(date);
+
+date = new Date();
+console.log(date);
+
+date = new Date(10);
+console.log(date);
+
+date = new Date(2003,3,16);
+console.log(date);
+
+date = new Date("2003-04-16");
+console.log(date);
+
+date = new Date("2003-04-16T11:55:21Z");
+console.log(date.toString());
+console.log(date.toDateString());
+console.log(date.toTimeString());
+console.log(date.toISOString());
+console.log(date.toUTCString());
+console.log(date.toJSON());
+console.log(date.toLocaleString());
+console.log(date.toLocaleDateString());
+console.log(date.toLocaleTimeString());
+
+
+// Get MEthods 
+console.log(date.getFullYear());
+console.log(date.getDay());
+console.log(date.getMonth());
+console.log(date.getHours());
+console.log(date.getMinutes());
+console.log(date.getSeconds());
+
+
+// Set Value 
+let birthday = new Date();
+console.log(birthday);
+
+birthday.setYear(2003)
+console.log(birthday);
+
+birthday.setMonth(3);
+console.log(birthday);
+
+birthday.setDate(16);
+console.log(birthday);
+
+
+
+date = new Date(2003,3,16);
+console.log(date);
+
 
 // String - are of 2 types ie primitive and Object
 // Primitive string is a sequence of characters enclosed by double or single quotes .
 // Object type string has properties like charAt , indexOf , slice , substring , concat , replace , match , search , split , toLower
+
+// There are String Object can be created by new keyword and String Constructor 
+let str = new String("My name is Priyansh");
+console.log(str);
+console.log(typeof str);
+
+// Properties
+// #1 - Length 
+console.log(str.length);
+
+// Methods 
+// #1 - lowercase 
+console.log(str.toLocaleLowerCase());
+
+// #2 - uppercase 
+console.log(str.toUpperCase()); 
+
+// #3 - at 
+console.log(str.charAt(4));
+
+// #4 - charCodeAt 
+console.log(str.charCodeAt(4));
+
+// #5 - startwith 
+console.log(str.startsWith("My"));
+
+// #6 - endsWith 
+console.log(str.endsWith("Priyansh"));
+
+// #7 - replace 
+console.log(str.replace("Priy","Riy"));
+
+let a = "  Devil  ";
+// #8 - trim 
+console.log(a);
+console.log(a.trim());
 
 // primitive string 
 let name = 'gagan'; 
@@ -21,19 +164,11 @@ let mssg1 = "this is my 3rd js video for learning basics of js."
 let word = mssg1.split(' ');
 console.log(word);
 
-// Templa literals - use for rearrange the sentence line patters, but we do not add \n , etc directly.
-// we can ue \ for new line  as well as we can use template literal by adding back slace. (` `)
+// Template literals - use for rearrange the sentence line patters, but we do not add \n , etc directly.
+// we can ue \ for new line  as well as we can use template literal by adding back slash. (` `)
 let mssging = `This is a example for showing the use of 
 template literals `;
 console.log(mssging);
-
-// date in js - we can directly reffer from internet - mdn 
-// in this , indexing is start from 0 for month
-// get  - output
-// Set - input 
-// for example 
-// let today = new Date();
-// console.log(today);
 
 // Arrays 
 // Adding new Elements 
@@ -44,7 +179,7 @@ console.log(mssging);
 
 // creation of array  
 let numbers = [1, 2 ,4 ,5, 'gagan' ]
-// ie in js array contain homo as well as heterogrnious items 
+// ie in js array contain homo as well as hetero items 
 
 // access item from Array
 console.log(numbers)
@@ -67,7 +202,7 @@ numbers.shift();
 console.log(numbers)
 
 // Searching - 
-// primitive  - we use inddexof & includes
+// primitive  - we use indexof & includes
 // console.log(numbers);
 // o/p - 7 
 // console.log(numbers.indexOf(15));
@@ -79,7 +214,7 @@ console.log(numbers)
 // {
 //     console.log("Present");
 // }
-// good practise 
+// good practice 
 console.log(numbers.includes(4)); 
 
 // console.log(numbers.indexOf(9, 6) );
@@ -98,8 +233,8 @@ console.log(courses.includes({no:1 , name:"gagan"}));
 // o/p = false
 
 // we use callback function - 
-// callback function is a function passed into another function as an argwnent, which is then invoked
-// inside the outer functim to sorne kind Of routine action.
+// callback function is a function passed into another function as an argument, which is then invoked
+// inside the outer function to some kind Of routine action.
 
 // normal way / notation 
 let course = courses.find(function(course){
@@ -166,6 +301,18 @@ let slicedArray1 = array1.slice(2).concat([...array2].slice(2))
 console.log(slicedArray1)
 
 // in objects - H/w 
+let obj1 = {
+    No_ : 1,
+    Name_ : "Priyansh"
+};
+
+let obj2 = {
+    No : 2,
+    Name : "Khushi"
+};
+
+let obj = Object.assign(obj1, obj2);
+console.log(obj);
 
 // Iterating an Array - we use for-of loop & for-each for iterating 
 let arr = [3,5,6];
