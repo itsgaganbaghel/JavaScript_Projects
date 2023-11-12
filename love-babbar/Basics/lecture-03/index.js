@@ -165,7 +165,7 @@ let word = mssg1.split(' ');
 console.log(word);
 
 // Template literals - use for rearrange the sentence line patters, but we do not add \n , etc directly.
-// we can ue \ for new line  as well as we can use template literal by adding back slash. (` `)
+// we can ue '\' for new line  as well as we can use template literal by adding back slash. (` `)
 let mssging = `This is a example for showing the use of 
 template literals `;
 console.log(mssging);
